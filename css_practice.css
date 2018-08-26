@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 15px;
+color: black;
+}
+.multiplebg{
+    background-image: url(img_flwr.png), url(paper.jpeg);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    background-size: 200px 200px, 256px 256px;
+    width: 100%;
+    height: 300px;
+    margin: 20px;
+}
+
+.multiplebg::before{
+    text-align: left;
+    line-height: 250px;
+    font-size: 40px;
+    color: darkred;
+    padding: 20px;
+    Content:"Welcome to CSS Practice";
+    font-weight: 500;
+}
+
+
+.singlebg {
+    background: #ffffff url("bgthree.png") repeat right top;
+    width: 100%;
+    height: 300px;
+    margin: 20px;
+}
+
+.singlebg::before{
+    content:"This is styled as a single line ";
+    font-size: 40px;
+    color:white;
+    text-align: center;
+    line-height: 250px;
+    padding: 20px;
+}
+
+.divforIinitial{
+    font-size: 20px;
+    color:gray;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+.pinitial{
+color: initial;
+font-family: initial;
+font-size: initial;
+margin: 20px;
+padding: 20px;
+}
+
+.bgmultiple{
+    /*background: #ffffff url("bgone.gif") repeat right top;*/
+    width: 90%;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: lightcyan;
+    background-image: url("bgone.gif");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: 300px 200px;
+    background-clip: padding-box;
+    background-attachment: local;
+}
+
+.bgmultiple::before{
+    content:"This is styled as a multiple lines";
+    font-size: 30px;
+    color:black;
+    text-align: center;
+    line-height: 250px;
+    padding: 20px;
+    font-weight: 600;
+}
+
+
+p.dotted {border-style: dotted; padding: 20px; margin: 10px;}
+p.dashed {border-style: dashed; padding: 20px; margin: 10px;}
+p.solid {border-style: solid; padding: 20px; margin: 10px;}
+p.double {border-style: double; padding: 20px; margin: 10px;}
+p.groove {border-style: groove; padding: 20px; margin: 10px;}
+p.ridge {border-style: ridge; padding: 20px; margin: 10px;}
+p.inset {border-style: inset; padding: 20px; margin: 10px;}
+p.outset {border-style: outset; padding: 20px; margin: 10px;}
+p.none {border-style: none; padding: 20px; margin: 10px;}
+p.hidden {border-style: hidden; padding: 20px; margin: 10px;}
+p.mix {border-style: dotted dashed solid double; padding: 20px; margin: 10px;}
+p.rounded {border-style: solid; border-radius: 10px; padding: 20px; margin: 10px;}
+
+.margin{
+    background: #f1f1f1;
+    padding: 45px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 2px dashed #bbb;
+    transition: all .25s ease-in-out;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    left: 0;
+    top: 2.5%;
+}
+
+.margin:before {
+    content: "Margin";
+    font-size: 1.4em;
+    position: absolute;
+    left: 0;
+    top: 1.8%;
+    width: 100%;
+    text-align: center;
+}
+
+.border{
+    padding: 45px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: green;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    left: 0;
+    top: 2.5%;
+}
+
+.border:before {
+    content: "Border";
+    font-size: 1.4em;
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 2.5%;
+    width: 100%;
+    text-align: center;
+}
+
+.padding{
+    color: black;
+    padding: 45px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #f1f1f1;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    left: 0;
+    top: 2.5%;
+}
+
+.padding:before {
+    content: "Padding";
+    font-size: 1.4em;
+    position: absolute;
+    left: 0.5%;
+    top: 3.7%;
+    width: 100%;
+    text-align: center;
+}
+
+.content{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: white;
+    border: 2px dashed #bbb;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    left: 0;
+    top: 2.5%;
+}
+
+.content:before {
+    content: "Content";
+    font-size: 1.4em;
+    display: block;
+    text-align: center;
+    line-height: 3.5;
+}
+
+.outline {
+    background: #f1f1f1;
+    padding: 45px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 2px dashed #f1f1f1;
+    transition: all .25s ease-in-out;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    left: 0;
+    top: 2.5%;
+}
+
+.outline:before {
+    content: "Outline";
+    font-size: 1.4em;
+    position: absolute;
+    left: 0;
+    top: 1.8%;
+    width: 100%;
+    text-align: center;
+}
+
+.size-sample{
+    width: 500px;
+    min-width: 300px;
+    max-width: 700px;
+    height: 100px;
+    min-height: 50px;
+    max-height: 200px;
+    background-color: powderblue;
+    margin: 20px;
+    padding: 20px;
+}
+ 
+.outline_sam {
+    margin: 30px;
+    background: yellow;
+    border: 1px solid black;
+    outline: 1px solid red;
+    outline-offset: 20px;
+    padding:10px;
+    text-align: center
+}
+
+.textsample1{
+color: maroon;
+direction: ltr;
+letter-spacing: 5px;
+line-height: 1.5em;
+text-align: center;
+text-decoration: underline overline wavy blue;
+text-indent: 10px;
+text-shadow: 1px 1px #ff0000;
+text-transform: capitalize;
+overflow: hidden;
+text-overflow: ellipsis;
+direction: rtl;
+unicode-bidi: bidi-override;
+word-spacing: 20px;
+}
+
+.textsample2{
+    color: maroon;
+direction: ltr;
+letter-spacing: 5px;
+line-height: 1.5em;
+text-align: center;
+text-decoration: underline  lightblue;
+text-indent: 10px;
+text-shadow: 1px 1px #ff0000;
+text-transform: capitalize;
+overflow: hidden;
+text-overflow: ellipsis;
+direction: rtl;
+unicode-bidi: bidi-override;
+word-spacing: 20px;
+
+}
+
+.fontsample1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-weight: 400;
+}
+
+.fontsample2{
+    font:italic bold 15px serif;
+    font-kerning: normal;
+}
